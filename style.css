@@ -1,0 +1,295 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --white-color: #fff;
+  --dark-color: #252525;
+  --primary-color: #3b141c;
+  --secondary-color: #f3961c;
+  --light-pink-color: #faf4f5;
+  --medium-gray-color: #ccc;
+  --font-size-s: 0.9rem;
+  --font-size-n: 1rem;
+  --font-size-m: 1.12rem;
+  --font-size-l: 1.5rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 2.3rem;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --border-radius-s: 8px;
+  --border-radius-m: 30px;
+  --border-radius-circle: 50%;
+  --site-max-width: 1300px;
+}
+
+/* Site-wide styles */
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  width: 100%;
+}
+
+.section-content {
+  margin: 0 auto;
+  padding: 20px 30px;
+  max-width: var(--site-max-width);
+}
+
+/* Navbar */
+header {
+  position: fixed;
+  width: 100%;
+  background: var(--primary-color);
+  z-index: 5;
+}
+
+header .navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.navbar .nav-logo .logo-text {
+  color: var(--white-color);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.navbar .nav-menu {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar .nav-menu .nav-link {
+  padding: 10px 18px;
+  font-size: var(--font-size-m);
+  border-radius: var(--border-radius-m);
+  color: var(--white-color);
+  transition: 0.3s ease;
+}
+
+.navbar .nav-menu .nav-link:hover {
+  color: var(--primary-color);
+  background: var(--secondary-color);
+}
+
+.navbar:where(#menu-close-button,#menu-open-button) {
+  display: none;
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  background: var(--primary-color);
+}
+
+.hero-section .section-content {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--white-color);
+  justify-content: space-between;
+}
+
+.hero-section .hero-details .title {
+  font-size: var(--font-size-xxl);
+  color: var(--secondary-color);
+  font-family: "Miniver", sans-serif;
+}
+
+.hero-section .hero-details .subtitle {
+  margin-top: 8px;
+  /* max-width: 70%; */
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.hero-section .hero-details .description {
+  /* max-width: 70%; */
+  margin: 24px 0 40px;
+  font-size: var(--font-size-m);
+}
+
+.hero-section .buttons {
+  display: flex;
+  gap: 23px;
+}
+
+.buttonorder-now, .buttoncontact-us:hover {
+  padding: 10px 26px;
+  border: 2px solid transparent;
+  color: var(--primary-color);
+  border-radius: var(--border-radius-m);
+  background: var(--secondary-color);
+  font-weight: var(--font-weight-medium);
+  transition: 0.3s ease;
+}
+
+.buttonorder-now:hover {
+  color: var(--white-color);
+  border-color: var(--white-color);
+  background: transparent;
+}
+
+.buttoncontact-us {
+  padding: 10px 26px;
+  border: 2px solid transparent;
+  color: var(--white-color);
+  border-radius: var(--border-radius-m);
+  background: transparent;
+  border-color: var(--white-color);
+  font-weight: var(--font-weight-medium);
+}
+
+.hero-section .hero-image-wrapper {
+  max-width: 500px;
+  margin-right: 30px;
+}
+/* About Section */
+.about-section{
+  padding: 120px 0;
+  background: var(--light-pink-color);
+}
+.about-section .section-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-section .about-image-wrapper .about-image{
+  width:400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--border-radius-circle);
+}
+
+/* Responsive media query for max width 900px */
+@media screen and (max-width:900px) {
+  :root{
+    --font-size-m: 1rem;
+  --font-size-l: 1.3rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 1.8rem;
+  }
+/* Apply the blur effect when the mobile menu is open */
+body.show-mobile-menu::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1; /* Lower z-index so it stays behind the menu */
+}
+
+/* Make sure the mobile menu has a higher z-index */
+.nav-menu {
+  z-index: 2;
+  position: relative; /* Ensure it stays above the blur effect */
+}
+
+
+  
+  .navbar .nav-menu {
+    display: flex;
+    text-align: center;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    left: -300px;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    background: var(--white-color);
+    transition: left 0.2s ease;
+  }
+
+  body.show-mobile-menu .navbar .nav-menu {
+    left: 0;
+  }
+
+  .navbar .nav-menu .nav-link {
+    color: var(--dark-color);
+    font-size: var(--font-size-l);
+    /* margin-top: 17px; */
+    display: block;
+  }
+
+  .navbar:where(#menu-close-button,#menu-open-button) {
+    display: block;
+    font-size: var(--font-size-l);
+  }
+
+  .navbar #menu-close-button {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+
+  .navbar #menu-open-button {
+    display: block;
+    color: var(--white-color);
+  }
+  .hero-section .hero-image-wrapper {
+    max-width: 500px;
+    margin-right: 0px;
+}
+  @media screen and (max-width:718px) {
+  .hero-section .section-content{
+    gap: 50px;
+    text-align: center;
+    padding: 30px 20px 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .navbar .nav-menu {
+    width: 200px;
+  }
+  .hero-section .buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+  .hero-section, .hero-details:is(.subtitle, .description){
+    max-width: 100%;
+  }
+  .hero-section .hero-image-wrapper{
+    max-width: 270px;
+    margin-right: 0;
+  } 
+  }
+
+}
+/* Hide the mobile menu buttons for larger screens */
+@media screen and (min-width: 900px) {
+  .navbar #menu-open-button,
+  .navbar #menu-close-button {
+    display: none;
+  }
+}
+
