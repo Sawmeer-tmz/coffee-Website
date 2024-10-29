@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <!-- Linking the CSS file -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
   <title>CoffeeShop</title>
 </head>
+
 <body>
   <!-- Header/Navbar -->
   <header>
@@ -19,39 +23,41 @@
       <ul class="nav-menu">
         <button id="menu-close-button" class="fas fa-times"></button>
         <li class="nav-item">
-          <a href="#" class="nav-link">Home</a>
+          <a href="#home" class="nav-link">Home</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">About</a>
+          <a href="#about" class="nav-link">About</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Menu</a>
+          <a href="#menu" class="nav-link">Menu</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Testimonials</a>
+          <a href="#testimonials" class="nav-link">Testimonials</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Gallery</a>
+          <a href="#gallery" class="nav-link">Gallery</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Contact</a>
+          <a href="#contact" class="nav-link">Contact</a>
         </li>
       </ul>
       <button id="menu-open-button" class="fas fa-bars"></button>
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  
   <main>
-    <section class="hero-section">
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
       <div class="section-content">
         <div class="hero-details">
           <h2 class="title">Best Coffee</h2>
           <h3 class="subtitle">Make your day great with our special coffee!</h3>
-          <p class="description">Welcome to our coffee paradise, where every bean tells a story and every cup sparks joy</p>
+          <p class="description">Welcome to our coffee paradise, where every bean tells a story and every cup sparks joy
+          </p>
           <div class="buttons">
             <a href="#" class="buttonorder-now">Order Now</a>
-            <a href="#" class="buttoncontact-us">Contact Us</a>
+            <a href="#contact" class="buttoncontact-us">Contact Us</a>
           </div>
         </div>
         <div class="hero-image-wrapper">
@@ -60,14 +66,16 @@
       </div>
     </section>
     <!-- About Section -->
-     <section class="about-section">
+    <section class="about-section" id="about">
       <div class="section-content">
         <div class="about-image-wrapper">
           <img src="images/about-image.jpg" alt="About" class="about-image">
         </div>
         <div class="about-details">
           <h2 class="section-title">About Us</h2>
-          <p class="text">We believe that coffee is more than just a drink: It’s a culture, an economy, an art, a science — and a passion. Whether you're new to the brew or an espresso expert, whether you prefer it with or without caffeine, there's always more to learn about America's favorite beverage.</p>
+          <p class="text">We believe that coffee is more than just a drink: It’s a culture, an economy, an art, a
+            science — and a passion. Whether you're new to the brew or an espresso expert, whether you prefer it with or
+            without caffeine, there's always more to learn about America's favorite beverage.</p>
           <div class="social-link-list">
             <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
             <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
@@ -75,10 +83,162 @@
           </div>
         </div>
       </div>
-     </section>
+    </section>
+    <!-- menu section -->
+    <section class="menu-section" id="menu">
+      <h2 class=" menu-title section-title">Our Menu</h2>
+      <div class="section-content">
+        <ul class="menu-list">
+          <li class="menu-item">
+            <img src="images/hot-beverages.png" alt="hot-beverage" class="menu-image">
+            <h3 class="names">Hot Beverages</h3>
+            <p class="texts">Food food food taste some food like some food</p>
+          </li>
+          <li class="menu-item">
+            <img src="images/cold-beverages.png" alt="cold-beverage" class="menu-image">
+            <h3 class="names">Cold Beverage</h3>
+            <p class="texts">Food food food taste some food like some food</p>
+          </li>
+          <li class="menu-item">
+            <img src="images/refreshment.png" alt="Refreshment" class="menu-image">
+            <h3 class="names">Refreshment</h3>
+            <p class="texts">Food food food taste some food like some food</p>
+          </li>
+          <li class="menu-item">
+            <img src="images/special-combo.png" alt="Special Combos" class="menu-image">
+            <h3 class="names">Special Combos</h3>
+            <p class="texts">Food food food taste some food like some food</p>
+          </li>
+          <li class="menu-item">
+            <img src="images/desserts.png" alt="Dessert" class="menu-image">
+            <h3 class="names">Dessert</h3>
+            <p class="texts">Food food food taste some food like some food</p>
+          </li>
+          <li class="menu-item">
+            <img src="images/burger-frenchfries.png" alt="Burger & French Fries" class="menu-image">
+            <h3 class="names">Burger & French Fries</h3>
+            <p class="texts">Food food food taste some food like some food</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- testimonial-section -->
+    <section class="testimonial-section" id="testimonials">
+      <div class=" t-content section-content">
+        <h2 class="testimonial-title section-title">TESTIMONIALS</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/user-1.jpg" alt="user-1" class="user-image">
+              <h3 class="u-name">Sarah</h3>
+              <i class="feedback">"Fantastic mocha flavor. Fresh and aromatic. Quick shipping!"</i>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/user-2.jpg" alt="user-2" class="user-image">
+              <h3 class="u-name">John</h3>
+              <i class="feedback">"Best coffee I’ve ever had!"</i>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/user-3.jpg" alt="user-3" class="user-image">
+              <h3 class="u-name">Karma</h3>
+              <i class="feedback">"Superb quality and taste!"</i>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/user-4.jpg" alt="user-4" class="user-image">
+              <h3 class="u-name">Sajina</h3>
+              <i class="feedback">"Loved it! Will order again!"</i>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/user-5.jpg" alt="user-5" class="user-image">
+              <h3 class="u-name">Ranjan</h3>
+              <i class="feedback">"Excellent service and product!"</i>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+      </div>
+    </section>
+    <!-- gallery section -->
+    <section class="gallery-section" id="gallery">
+      <div class="gallery-content section-content">
+        <h3 class="gallery-title section-title">Gallery</h3>
+        <ul class="food-list">
+          <li class="fitem"><img src="images/gallery-1.jpg" alt="" class="food-image"></li>
+          <li class="fitem"><img src="images/gallery-2.jpg" alt="" class="food-image"></li>
+          <li class="fitem"><img src="images/gallery-3.jpg" alt="" class="food-image"></li>
+          <li class="fitem"><img src="images/gallery-4.jpg" alt="" class="food-image"></li>
+          <li class="fitem"><img src="images/gallery-5.jpg" alt="" class="food-image"></li>
+          <li class="fitem"><img src="images/gallery-6.jpg" alt="" class="food-image"></li>
+        </ul>
+      </div>
+    </section>
+    <!-- contact section -->
+    <section class="contact-section" id="contact">
+      <h2 class="contact-title section-title">CONTACT US</h2>
+      <div class="contact-content section-content">
+        <ul class="contact-info-list">
+          <li class="contact-info">
+            <i class="fas fa-map-marker-alt"></i>
+            <p class="ContactDetail">Payutar 11, Kapan, Kathmandu</p>
+          </li>
+          <li class="contact-info">
+            <i class="fas fa-envelope"></i>
+            <p class="ContactDetail">samirtamang02@gmail.com</p>
+          </li>
+          <li class="contact-info">
+            <i class="fas fa-phone"></i>
+            <p class="ContactDetail">+977 9846599566</p>
+          </li>
+          <li class="contact-info">
+            <i class="fas fa-clock"></i>
+            <p class="ContactDetail">Monday-Friday:9:00 AM-5:00 PM</p>
+          </li>
+          <li class="contact-info">
+            <i class="fas fa-clock"></i>
+            <p class="ContactDetail">Saturday:10:00 AM-3:00 PM</p>
+          </li>
+          <li class="contact-info">
+            <i class="fas fa-ban"></i>
+            <p class="ContactDetail">Sunday: Closed</p>
+          </li>
+          <li class="contact-info">
+            <i class="fas fa-globe"></i>
+            <p class="ContactDetail">www.ipractisehere.com</p>
+          </li>
+        </ul>
+        <form action="#" method="post">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+    <!-- footer section -->
+    <footer class="footer-section">
+      <div class="footer-content section-content">
+        <p class="copyright-text"> © 2024 CoffeeShop</p>
+        <div class="social-link-list">
+          <a href="#" class="footer-social-link"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="footer-social-link"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="footer-social-link"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <p class="policy-text">
+          <a href="" class="policy-link">Privacy Policy</a>
+          <span class="separator">●</span>
+          <a href="" class="policy-link">Refund Policy</a>
+        </p>
+      </div>
+    </footer>
   </main>
 
   <!-- JavaScript -->
   <script src="script.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </script>
 </body>
+
 </html>
