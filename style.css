@@ -52,7 +52,7 @@ img {
 
 .section-content {
   margin: 0 auto;
-  padding: 20px 30px;
+  padding: 0px 30px;
   max-width: var(--site-max-width);
 }
 
@@ -273,9 +273,9 @@ width: 180px;
   transition: 0.3s ease;
   /* z-index:10;  */
 }
-.names, .texts{
+/* .names, .texts{
   padding-top: 10px;
-}
+} */
 
 
 /* testimonial section */
@@ -284,7 +284,9 @@ width: 180px;
   text-align: center;
   padding: 120px 0;
   background: var(--light-pink-color);
+  
 }
+
 .user-image {
   width: 170px;
   height: 170px;
@@ -334,8 +336,8 @@ width: 180px;
 }
 .food-image{
   width: 100%;
-  height:250px;
-  object-fit: cover;
+  height:200px;
+  /* object-fit: cover; */
   border-radius: var(--border-radius-s);
   cursor: pointer;
 }
@@ -455,7 +457,7 @@ body.show-mobile-menu::before {
   width: 100%;
   backdrop-filter: blur(5px);
   /* background: rgba(0, 0, 0, 0.2); */
-  z-index: 1; 
+  z-index: 2; 
 }
 
 /* Make sure the mobile menu has a higher z-index */
@@ -510,6 +512,10 @@ body.show-mobile-menu::before {
     color: var(--white-color);
     padding: 20px;
   }
+
+  .section-title {
+    margin-bottom: 20px;
+}
   .hero-section .hero-image-wrapper {
     max-width: 500px;
     margin-right: 0px;
@@ -523,9 +529,9 @@ body.show-mobile-menu::before {
   /* height: auto; */
   text-align: center;
 }
-.menu-list{
+/* .menu-list{
   padding: 30px;
-}
+} */
 .menu-image{
   height: 150px;
   width: 150px;
@@ -624,6 +630,8 @@ body.show-mobile-menu::before {
     width: 150px;
   }
 
+  /* testimonial */
+ 
   /* contact */
   .contact-content {
     display: flex;
@@ -636,7 +644,7 @@ body.show-mobile-menu::before {
   width: 80%;
  }
   form{
-    width: 80%;
+    width: 100%;
   } 
   
 
@@ -658,14 +666,20 @@ body.show-mobile-menu::before {
  @media screen and (max-width: 500px){
   /* menu section */
 .menu-image{
-  height: 150px;
+  height: 120px;
     width: 60%;
 } 
-/* gallery */
-.fitem{
-  width: 70%;
-}
 
+/* testimonial */
+.swiper-button-next:after, .swiper-button-prev:after {
+  
+  font-size: 25px !important;
+ 
+}
+/* gallery */
+.food-image {
+  height: 120px;
+}
 /* contact */
 
 .contact-info{
@@ -673,10 +687,18 @@ body.show-mobile-menu::before {
   text-align: left;
 }
 .contact-info-list {
-  width: 85%;
+  width: 100%;
   white-space: nowrap;
   overflow: scroll;
   text-overflow: ellipsis;
+}
+form button[type="submit"] {
+  
+   
+    border: 0px solid transparent;
+   align-self: center;
+    font-size: 12px;
+   
 }
 /* footer */
 .copyright-text, .footer-social-link,.separator,.policy-link{
