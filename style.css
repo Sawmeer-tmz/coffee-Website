@@ -106,6 +106,12 @@ header .navbar {
   display: none;
 }
 
+/*  need to undestand */
+/* .hide-navbar {
+  transform: translateY(-100%);
+  transition: transform 0.s ease;
+} */
+
 
 /* Hero Section */
 
@@ -251,7 +257,7 @@ gap: 20px;
 .menu-list {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 50px;
+  row-gap: 60px;
   justify-content: space-evenly; 
 }
 
@@ -264,8 +270,8 @@ gap: 20px;
 }
 
 .menu-image {
-height: 180px;
-width: 180px;
+height: 150px;
+width: 150px;
 
 }
 .menu-item:hover{
@@ -328,7 +334,7 @@ width: 180px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 22px;
   
 }
 .fitem{
@@ -337,7 +343,7 @@ width: 180px;
 .food-image{
   width: 100%;
   height:200px;
-  /* object-fit: cover; */
+  object-fit: cover;
   border-radius: var(--border-radius-s);
   cursor: pointer;
 }
@@ -358,8 +364,8 @@ width: 180px;
 
 .contact-content {
   display: flex;
-  /* flex-wrap: wrap; */
-gap: 50px;
+
+gap: 35px;
 }
 .contact-info-list{
   width: 45%;
@@ -418,9 +424,9 @@ border: 2px solid var(--secondary-color);
 }
 .footer-content{
   font-size: 20px;
+  padding: 20px 30px;
   display: flex;
   justify-content:space-between;
-/* color: var(--white-color); */
   gap: 20px;
 }
 .copyright-text, .footer-social-link,.separator,.policy-link{
@@ -456,7 +462,7 @@ body.show-mobile-menu::before {
   height: 100%;
   width: 100%;
   backdrop-filter: blur(5px);
-  /* background: rgba(0, 0, 0, 0.2); */
+  background: rgba(0, 0, 0, 0.2);
   z-index: 2; 
 }
 
@@ -489,7 +495,7 @@ body.show-mobile-menu::before {
   .navbar .nav-menu .nav-link {
     color: var(--dark-color);
     font-size: var(--font-size-l);
-    /* margin-top: 17px; */
+    
     display: block;
   }
 
@@ -521,17 +527,23 @@ body.show-mobile-menu::before {
     margin-right: 0px;
 }
 
+/* about */
+
+.text {
+  margin-bottom: 20px;
+}
+
 /* responsive menu  */
 
 
 .menu-item {
   width: calc( 50% - 20px ); 
-  /* height: auto; */
+  
   text-align: center;
 }
-/* .menu-list{
-  padding: 30px;
-} */
+.menu-list{
+  padding-top:20px;
+}
 .menu-image{
   height: 150px;
   width: 150px;
@@ -541,29 +553,26 @@ body.show-mobile-menu::before {
 .testimonial-title{
   margin-bottom:0;
  }
- /* .swiper-slide{
-  width: calc( 50% - 10px );
- } */
+
  .u-name, .feedback{
   padding: 0px;
 }
-/* .swiper-button-prev,
-.swiper-button-next {
-  display: none !important; 
-} */
+
 
 /* responsive gallery  */
-
-.fitem{
-  width: calc( 50% - 15px );
+.food-list{
+  padding-top: 20px;
 }
+
 
 /* responsive contact  */
 .contact-info-list {
   
   font-size: var(--font-size-s);
 }
- 
+ .contact-content{
+  padding-top: 20px;
+ }
 
 .about-section, .testimonial-section, .menu-section, .gallery-section, .contact-section{
   padding: 70px 0;
@@ -603,9 +612,9 @@ body.show-mobile-menu::before {
   /* responsive about section */
 
   .about-section .section-content{
-    gap: 50px;
+    gap: 20px;
     text-align: center;
-    padding: 30px 20px 20px;
+    padding: 0px 20px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -626,12 +635,24 @@ body.show-mobile-menu::before {
     text-align: center;
   }
   .menu-image{
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
+  }
+   .texts{
+    font-size: var(--font-size-m);
   }
 
   /* testimonial */
- 
+  .swiper-button-next:after, .swiper-button-prev:after {
+  
+    font-size: 25px !important;
+   
+  }
+
+/* gallery */
+.fitem{
+  width: calc( 50% - 15px );
+}
   /* contact */
   .contact-content {
     display: flex;
@@ -641,7 +662,10 @@ body.show-mobile-menu::before {
     padding: 20px 30px;
   }
  .contact-info-list{
-  width: 80%;
+  width: 100%;
+  white-space: nowrap;
+  overflow: scroll;
+  text-overflow: ellipsis;
  }
   form{
     width: 100%;
@@ -665,10 +689,12 @@ body.show-mobile-menu::before {
 
  @media screen and (max-width: 500px){
   /* menu section */
-.menu-image{
-  height: 120px;
-    width: 60%;
-} 
+  .names{
+    font-size: 14px;
+  }
+  .texts {
+    font-size: 12px;
+}
 
 /* testimonial */
 .swiper-button-next:after, .swiper-button-prev:after {
@@ -678,7 +704,7 @@ body.show-mobile-menu::before {
 }
 /* gallery */
 .food-image {
-  height: 120px;
+  height: 100px;
 }
 /* contact */
 
@@ -686,12 +712,7 @@ body.show-mobile-menu::before {
   font-size: var(--font-size-s);
   text-align: left;
 }
-.contact-info-list {
-  width: 100%;
-  white-space: nowrap;
-  overflow: scroll;
-  text-overflow: ellipsis;
-}
+
 form button[type="submit"] {
   
    
@@ -708,11 +729,8 @@ form button[type="submit"] {
 }
 
 
-
-
-
 /* Hide the mobile menu buttons for larger screens */
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 901px) {
   .navbar #menu-open-button,
   .navbar #menu-close-button {
     display: none;
