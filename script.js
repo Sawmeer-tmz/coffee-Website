@@ -33,24 +33,20 @@ navLinks.forEach(link => {
     });
 });
 
+// hide navbar on scroll
+// let lastScrollY = window.scrollY;
+// const navbar = document.querySelector("header");
 
-
-let lastScrollTop = 0;
-const navbar = document.querySelector('.navbar');
-
-window.addEventListener('scroll', function() {
-  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-  if (currentScroll > lastScrollTop) {
-    // Scrolling Down
-    navbar.classList.add('navbar-hidden'); // Hide the navbar
-  } else {
-    // Scrolling Up
-    navbar.classList.remove('navbar-hidden'); // Show the navbar
-  }
-
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
-});
+// window.addEventListener("scroll", () => {
+//   if (window.scrollY > lastScrollY) {
+    
+//     navbar.classList.add("hide-navbar");
+//   } else {
+    
+//     navbar.classList.remove("hide-navbar");
+//   }
+//   lastScrollY = window.scrollY;
+// });
 
 
 
@@ -77,11 +73,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 spaceBetween: 30,
             },
             718: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 20,
             },
             500: {
-                slidesPerView: 1,
+                slidesPerView: 2,
                 spaceBetween: 10,
             },
         },
